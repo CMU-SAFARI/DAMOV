@@ -1,0 +1,8 @@
+polybench,linear-algebra,3mm,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/3mm
+polybench,linear-algebra,doitgen,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/doitgen
+polybench,linear-algebra,gemm,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/gemm
+polybench,linear-algebra,gemver,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/gemver
+polybench,linear-algebra,symm,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/symm
+polybench,linear-algebra,gramschmidt,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/gramschmidt
+polybench,stencil,convolution-2d,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/convolution-2d
+polybench,stencil,fdtd-apml,PIM_ROOT/PolyBench-ACC/OpenMP/compiled/fdtd-apml

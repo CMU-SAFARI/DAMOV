@@ -1,0 +1,4 @@
+stream,Add,Add,PIM_ROOT/STREAM/stream_add THREADS
+stream,Copy,Copy,PIM_ROOT/STREAM/stream_copy THREADS
+stream,Scale,Scale,PIM_ROOT/STREAM/stream_scale THREADS
+stream,Triad,Triad,PIM_ROOT/STREAM/stream_triad THREADS

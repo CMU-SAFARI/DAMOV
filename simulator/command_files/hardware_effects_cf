@@ -1,0 +1,4 @@
+hardware-effects,bandwidth,NONTEMPORAL,PIM_ROOT/hardware-effects/build/bandwidth-saturation/bandwidth-saturation 1 THREADS
+hardware-effects,bandwidth,TEMPORAL,PIM_ROOT/hardware-effects/build/bandwidth-saturation/bandwidth-saturation 0 THREADS
+hardware-effects,false-sharing,SHARED,PIM_ROOT/hardware-effects/build/false-sharing/false-sharing THREADS 1
+hardware-effects,false-sharing,ISOLATED,PIM_ROOT/hardware-effects/build/false-sharing/false-sharing THREADS 8

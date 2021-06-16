@@ -1,0 +1,19 @@
+chai,BFS,BFS,PIM_ROOT/chai-cpu/BFS/bfs_00 -f PIM_ROOT/chai-cpu/BFS/input/USA-road-d.USA.gr.parboil -t THREADS -w 0 -r 1
+chai,BFS,COMP,PIM_ROOT/chai-cpu/BFS/bfs_01 -f PIM_ROOT/chai-cpu/BFS/input/USA-road-d.USA.gr.parboil -t THREADS -w 0 -r 1 
+chai,BFS,FETCH,PIM_ROOT/chai-cpu/BFS/bfs_02 -f PIM_ROOT/chai-cpu/BFS/input/USA-road-d.USA.gr.parboil -t THREADS -w 0 -r 1
+chai,BFS,LOAD,PIM_ROOT/chai-cpu/BFS/bfs_03 -f PIM_ROOT/chai-cpu/BFS/input/USA-road-d.USA.gr.parboil -t THREADS -w 0 -r 1
+chai,BS,BEZIER_KERNEL,PIM_ROOT/chai-cpu/BS/bs -t THREADS -w 0 -r 1
+chai,TRNS,TRNS,PIM_ROOT/chai-cpu/OOPTRNS/ooptrns -m 1024 -n 524288 - THREADS -w 0 -r 1
+chai,TRNS,CPU,PIM_ROOT/chai-cpu/OOPTRNS/ooptrns_02 -m 1024 -n 524288 - THREADS -w 0 -r 1
+chai,CEDD,Gaussian,PIM_ROOT/chai-cpu/CEDD/cedd_01 -t THREADS -f PIM_ROOT/chai-cpu/CEDD/input/peppa/ -w 0 -r 1
+chai,CEDD,Sobel,PIM_ROOT/chai-cpu/CEDD/cedd_02 -t THREADS -f PIM_ROOT/chai-cpu/CEDD/input/peppa/ -w 0 -r 1
+chai,CEDD,Supression,PIM_ROOT/chai-cpu/CEDD/cedd_03 -t THREADS -f PIM_ROOT/chai-cpu/CEDD/input/peppa/ -w 0 -r 1
+chai,CEDD,Hystresis,PIM_ROOT/chai-cpu/CEDD/cedd_04 -t THREADS -f PIM_ROOT/chai-cpu/CEDD/input/peppa/ -w 0 -r 1
+chai,HSTI,HSTI,PIM_ROOT/chai-cpu/HSTI/hsti -t THREADS -w 0 -r 1
+chai,HSTO,HSTO,PIM_ROOT/chai-cpu/HSTO/hsto -t THREADS -w 0 -r 1
+chai,OOPPAD,OOPPAD,PIM_ROOT/chai-cpu/OOPPAD/ooppad -t THREADS -w 0 -r 1 -m 10000 -n 9999 
+chai,SC,SC,PIM_ROOT/chai-cpu/SC/sc -t THREADS -w 0 -r 1
+chai,SELECT,SELECT,PIM_ROOT/chai-cpu/SELECT/sri -n 67108864 -t THREADS -w 0 -r 1
+chai,SELECT,FETCH_ADD,PIM_ROOT/chai-cpu/SELECT/sri_fetch_add -n 67108864 -t THREADS -w 0 -r 1
+chai,VPACK,VPACK,PIM_ROOT/chai-cpu/VPACK/vpack -t THREADS -m 268435456 -n 16777216 -w 0 -r 1 
+chai,VUPACK,VUPACK,PIM_ROOT/chai-cpu/VUPACK/vupack -t THREADS -m 268435456 -n 16777216 -w 0 -r 1

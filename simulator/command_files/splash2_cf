@@ -1,0 +1,14 @@
+splash-2,Barnes,computeForces,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/barnes/scripts/run_splash2_barnes_computeForces_THREADS_core.sh
+splash-2,Barnes,gravsub,PIM_ROOT/parsec-3.0/ext/splash2x/apps/barnes/scripts/run_splash2_barnes_gravsub_THREADS_core.sh
+splash-2,Oceancp,relax,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_cp_relax -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceancp,jacobcalc,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_cp_jacob -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceancp,slave2,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_cp_slave -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceancp,laplaccalc,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_cp_laplace -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceanncp,jacobcalc,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_ncp_jacob -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceanncp,relax,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_ncp_relax -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceanncp,slave2,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_ncp_slave -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Oceanncp,laplaccalc,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/ocean_ncp_laplace -n2050 -pTHREADS -e1e-07 -r20000 -t28800
+splash-2,Radix,slave_sort,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/radix -pTHREADS -r4096 -n67108864 -m2147483647
+splash-2,FFT,Reverse,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/fft_reverse -m24 -pTHREADS
+splash-2,FFT,Transpose,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/fft_transpose -m24 -pTHREADS
+splash-2,Lucb,Bmod,PIM_ROOT/parsec-3.0/ext/splash2x/binaries/lu_cb -pTHREADS -n2048 -b16

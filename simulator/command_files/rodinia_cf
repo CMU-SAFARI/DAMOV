@@ -1,0 +1,11 @@
+rodinia,Backprop,layerfoward,PIM_ROOT/rodinia_3.1/openmp/backprop/backprop_layerforward 134217728 THREADS
+rodinia,Backprop,adjustWeights,PIM_ROOT/rodinia_3.1/openmp/backprop/backprop_adjust_weights 134217728 THREADS
+rodinia,BFS,BFS,PIM_ROOT/rodinia_3.1/openmp/bfs/bfs THREADS PIM_ROOT/rodinia_3.1/data/bfs/graph1MW_6.txt
+rodinia,CFD,CFD,PIM_ROOT/rodinia_3.1/openmp/cfd/euler3d_cpu PIM_ROOT/rodinia_3.1/data/cfd/fvcorr.domn.193K THREADS
+rodinia,Kmeans,Kmeans,PIM_ROOT/rodinia_3.1/openmp/kmeans/kmeans_openmp/kmeans_kmeans -n THREADS -i PIM_ROOT/rodinia_3.1/data/kmeans/819200.txt
+rodinia,Kmeans,euclidDist,PIM_ROOT/rodinia_3.1/openmp/kmeans/kmeans_openmp/kmeans_euclid -n THREADS -i PIM_ROOT/rodinia_3.1/data/kmeans/819200.txt
+rodinia,Kmeans,find,PIM_ROOT/rodinia_3.1/openmp/kmeans/kmeans_openmp/kmeans_find -n THREADS -i PIM_ROOT/rodinia_3.1/data/kmeans/819200.txt
+rodinia,Myocyte,master,PIM_ROOT/rodinia_3.1/openmp/myocyte/myocyte.out_master 1000000 1 0 THREADS 
+rodinia,Myocyte,fin,PIM_ROOT/rodinia_3.1/openmp/myocyte/myocyte.out_fin 1000000 1 0 THREADS 
+rodinia,Srad,FIN,PIM_ROOT/rodinia_3.1/openmp/srad/srad_v1/srad 100 0.5 5020 4580 THREADS 
+rodinia,StreamCluster,pengain,PIM_ROOT/rodinia_3.1/openmp/streamcluster/sc_omp 10 20 256 65536 65536 1000 none output.txt THREADS

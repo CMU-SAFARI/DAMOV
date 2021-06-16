@@ -1,0 +1,14 @@
+prefix=/home/safari/geraldo/panzer/isca2018/PIM-Benchmarks/PIMBenchmarkRepo/damov/simulator/libconfig
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libconfig++
+Description: C++ Configuration File Library
+Version: 1.7.2
+URL: http://www.hyperrealm.com/main.php?s=libconfig
+Requires:
+Conflicts:
+Libs: -L${libdir} -lconfig++
+Libs.private:  
+Cflags: -I${includedir}

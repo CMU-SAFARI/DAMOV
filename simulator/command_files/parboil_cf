@@ -1,0 +1,7 @@
+parboil,Stencil,Stencil,PIM_ROOT/parboil/benchmarks/stencil/build/omp_base_default/stencil -i PIM_ROOT/parboil/datasets/stencil/default/input/512x512x64x100.bin -- 512 512 64 100 THREADS 
+parboil,BFS,bfs_sf,PIM_ROOT/parboil/benchmarks/bfs/build/omp_base_default/bfs -i PIM_ROOT/parboil/datasets/bfs/SF/input/graph_input.dat -- THREADS
+parboil,BFS,bfs_1M,PIM_ROOT/parboil/benchmarks/bfs/build/omp_base_default/bfs -i PIM_ROOT/parboil/datasets/bfs/1M/input/graph_input.dat -- THREADS
+parboil,BFS,bfs_NY,PIM_ROOT/parboil/benchmarks/bfs/build/omp_base_default/bfs -i PIM_ROOT/parboil/datasets/bfs/NY/input/graph_input.dat -- THREADS
+parboil,BFS,bfs_ut,PIM_ROOT/parboil/benchmarks/bfs/build/omp_base_default/bfs -i PIM_ROOT/parboil/datasets/bfs/UT/input/graph_input.dat -- THREADS
+parboil,MRI,mri-gridding,PIM_ROOT/parboil/benchmarks/mri-gridding/build/omp_base_default/mri-gridding -i PIM_ROOT/parboil/datasets/mri-gridding/small/input/small.uks -- 32 0 THREADS
+parboil,TPACF,tpacf,PIM_ROOT/parboil/benchmarks/tpacf/run/scripts/THREADS_Core

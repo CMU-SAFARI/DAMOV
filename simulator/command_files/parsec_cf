@@ -1,0 +1,5 @@
+parsec,Streamcluster,dist,PIM_ROOT/parsec-3.0/pkgs/binaries/streamcluster 10 20 128 16384 16384 1000 none PIM_ROOT/parsec-3.0/pkgs/outputs/streamcluster/output.txt THREADS
+parsec,Bodytrack,FilterRow,PIM_ROOT/parsec-3.0/pkgs/binaries/bodytrack PIM_ROOT/parsec-3.0/pkgs/inputs/bodytrack/sequenceB_4  4 4 4000 5 0 THREADS
+parsec,Ferret,DistL2Float,PIM_ROOT/parsec-3.0/pkgs/binaries/ferret PIM_ROOT/parsec-3.0/pkgs/inputs/ferret/corel lsh PIM_ROOT/parsec-3.0/pkgs/inputs/ferret/queries 10 20 THREADS output.txt
+parsec,Fluidaminate,ProcessCollision2MT,PIM_ROOT/parsec-3.0/pkgs/binaries/fluidanimate THREADS 5 PIM_ROOT/parsec-3.0/pkgs/inputs/fluidanimate/in_300K.fluid out.fluid
+parsec,Blackscholes,BlkSchlsEqEuroNoDiv,PIM_ROOT/parsec-3.0/pkgs/binaries/blackscholes THREADS PIM_ROOT/parsec-3.0/pkgs/inputs/blackscholes/in_64K.txt PIM_ROOT/parsec-3.0/pkgs/outputs/blackscholes/prices.txt

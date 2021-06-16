@@ -1,0 +1,12 @@
+hashjoin,NPO,knuthshuffle,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_knuth_shuffle -a NPO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,NPO,lock,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_lock -a NPO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,NPO,probehashtable,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_probe_hashtable -a NPO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRH,knuthshuffle,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_knuth_shuffle -a PRH -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRH,lock,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_lock -a PRH -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRH,histogramjoin,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_histogramjoin -a PRH -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRHO,knuthshuffle,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_knuth_shuffle -a PRHO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRHO,radixcluster,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_radix_cluster -a PRHO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRO,knuthshuffle,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_knuth_shuffle -a PRO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRO,radixcluster,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_radix_cluster -a PRO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,PRO,parallelradix_partition,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_parallel_radix_partition -a PRHO -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS
+hashjoin,RJ,knuthshuffle,PIM_ROOT/multicore-hashjoins-0.1/src/mchashjoins_knuth_shuffle -a RJ -r 12800000 -s 12000000 -x 12345 -y 54321 -n THREADS

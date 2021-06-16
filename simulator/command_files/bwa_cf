@@ -1,0 +1,2 @@
+bwa,Align,AlignWg1,PIM_ROOT/bwa/bwa aln -t THREADS PIM_ROOT/GASE-master/inputs/hg19.fa PIM_ROOT/GASE-master/inputs/wgsim_150_1.fastq
+bwa,Align,AlignWg2,PIM_ROOT/bwa/bwa aln -t THREADS PIM_ROOT/GASE-master/inputs/hg19.fa PIM_ROOT/GASE-master/inputs/wgsim_150_2.fastq

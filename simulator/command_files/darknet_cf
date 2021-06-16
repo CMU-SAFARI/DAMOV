@@ -1,0 +1,4 @@
+darknet,alexnet,gemm_nn,PIM_ROOT/Darknet/darknet detect PIM_ROOT/Darknet/cfg/alexnet.cfg PIM_ROOT/Darknet/weights/alexnet.weights PIM_ROOT/Darknet/data/dog.jpg
+darknet,vgg16,gemm_nn,PIM_ROOT/Darknet/darknet detect PIM_ROOT/Darknet/cfg/vgg-16.cfg PIM_ROOT/Darknet/weights/vgg-16.weights PIM_ROOT/Darknet/data/dog.jpg
+darknet,resnet152,gemm_nn,PIM_ROOT/Darknet/darknet detect PIM_ROOT/Darknet/cfg/resnet152.cfg PIM_ROOT/Darknet/weights/resnet152.weights PIM_ROOT/Darknet/data/dog.jpg
+darknet,yolo,gemm_nn,PIM_ROOT/Darknet/darknet detect PIM_ROOT/Darknet/cfg/yolo.cfg PIM_ROOT/Darknet/weights/yolo.weights PIM_ROOT/Darknet/data/dog.jpg

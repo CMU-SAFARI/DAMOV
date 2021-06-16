@@ -1,0 +1,5 @@
+phoenix,Kmeans,kmeans_reduce,PIM_ROOT/phoenix/phoenix-2.0/tests/kmeans/kmeans-pthread -d 3 -c 1000 -p  1000000 -s 1000 -t THREADS
+phoenix,Linearregression,main,PIM_ROOT/phoenix/phoenix-2.0/tests/linear_regression/linear_regression-pthread PIM_ROOT/phoenix/phoenix-2.0/datasets/linear_regression_datafiles/key_file_500MB.txt THREADS
+phoenix,Stringmatch,main,PIM_ROOT/phoenix/phoenix-2.0/tests/string_match/string_match-pthread PIM_ROOT/phoenix/phoenix-2.0/datasets/string_match_datafiles/key_file_500MB.txt THREADS
+phoenix,PCA,main,PIM_ROOT/phoenix/phoenix-2.0/tests/pca/pca-pthread THREADS
+phoenix,WordCount,main,PIM_ROOT/phoenix/phoenix-2.0/tests/word_count/word_count-pthread PIM_ROOT/phoenix/phoenix-2.0/datasets/word_count_datafiles/word_100MB.txt 1 THREADS

@@ -1,0 +1,5 @@
+hpcg,HPCG,CG,PIM_ROOT/hpcg/build/bin/xhpcg_HPGCg
+hpcg,HPCG,ComputePrologation,PIM_ROOT/hpcg/build/bin/xhpcg_HPGPro
+hpcg,HPCG,ComputeRestriction,PIM_ROOT/hpcg/build/bin/xhpcg_HPGRes
+hpcg,HPCG,ComputeSPMV,PIM_ROOT/hpcg/build/bin/xhpcg_HPGSpm
+hpcg,HPCG,ComputeSYMGS,PIM_ROOT/hpcg/build/bin/xhpcg_HPGSym
