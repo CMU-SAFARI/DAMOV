@@ -8,7 +8,7 @@ The DAMOV framework is based on two widely-known simulators: [ZSim](https://gith
 
 
 ## Citation
-Please cite the following paper if you find this repository useful:
+Please cite the following preliminary version of our paper if you find this repository useful:
 
 Geraldo F. Oliveira, Juan Gómez-Luna, Lois Orosa, Saugata Ghose, Nandita Vijaykumar, Ivan Fernandez, Mohammad Sadrosadati, Onur Mutlu, "[DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks](https://arxiv.org/pdf/2105.03725.pdf)". arXiv:2105.03725 [cs.AR], 2021.
 
