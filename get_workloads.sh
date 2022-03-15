@@ -1,39 +1,21 @@
-#!/bin/bash
 
+echo -e "Downloading megatools"
+wget https://megatools.megous.com/builds/experimental/megatools-1.11.0-git-20210505-linux-x86_64.tar.gz
 
-mkdir workloads/
+tar -xvf megatools-1.11.0-git-20210505-linux-x86_64.tar.gz 
 
-echo -e "Downloading DAMOV workloads -- Part 1"
-git clone https://damovsafari@bitbucket.org/damovsafari/damovworkloadspart1.git
-cd damovworkloadspart1/
-lrzuntar workloads_part1.tar.lrz
-rm workloads_part1.tar.lrz
-mv workloads_part1/* ../workloads
-cd ..
-rm -rf damovworkloadspart1
+rm megatools-1.11.0-git-20210505-linux-x86_64.tar.gz
 
+echo -e "\nDownloading DAMOV workloads"
+./megatools-1.11.0-git-20210505-linux-x86_64/megatools dl https://mega.nz/file/Mz51xJyY#J_ai3_Pl5kVvFETurKmBuMIrOagUK4sadyahOzUYQVE
 
-echo -e "\nDownloading DAMOV workloads -- Part 2"
-git clone https://damovsafari@bitbucket.org/damovsafari/damovworkloadspart2.git
-cd damovworkloadspart2/
-lrzuntar workloads_part2.tar.lrz
-rm workloads_part2.tar.lrz
-mv workloads_part2/* ../workloads
-cd ..
-rm -rf damovworkloadspart2
+rm -rf megatools-1.11.0-git-20210505-linux-x86_64/
 
+tar xvf damov_workloads.tar.gz 
 
-echo -e "\nDownloading DAMOV workloads -- Part 3"
-git clone https://damovsafari@bitbucket.org/damovsafari/damovworkloadspart3.git
-cd damovworkloadspart3/
-lrzuntar workloads_part3.tar.lrz
-rm workloads_part3.tar.lrz
-mv workloads_part3/* ../workloads
-cd ..
-rm -rf damovworkloadspart3
+rm damov_workloads.tar.gz
+
+echo -e "\nDone"
 
 clear
 ls workloads/
-
-
-
