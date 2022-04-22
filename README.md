@@ -15,13 +15,11 @@ Geraldo F. Oliveira, Juan Gómez-Luna, Lois Orosa, Saugata Ghose, Nandita Vijayk
 Bibtex entry for citation:
 
 ```
-@misc{deoliveira2021damov,
-  title={{Benchmarking a New Paradigm: An Experimental Analysis of a Real Processing-in-Memory Architecture}},
-  author={Geraldo F. Oliveira and Juan Gómez-Luna and Lois Orosa and Saugata Ghose and Nandita Vijaykumar and Ivan Fernandez and Mohammad Sadrosadati and Onur Mutlu},
+@article{oliveira2021damov,
+  title={{DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks}},
+  author={Oliveira, Geraldo F and G{\'o}mez-Luna, Juan and Orosa, Lois and Ghose, Saugata and Vijaykumar, Nandita and Fernandez, Ivan and Sadrosadati, Mohammad and Mutlu, Onur},
+  journal={IEEE Access},
   year={2021},
-  eprint={2105.03725},
-  archivePrefix={arXiv},
-  primaryClass={cs.AR}
 }
 ```
 
