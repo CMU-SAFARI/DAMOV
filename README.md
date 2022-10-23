@@ -104,7 +104,7 @@ To aid the compilation of the applications, we provide helping scripts inside ea
 To illustrate, to compile the STREAM applications:
 
 ```
-cd worloads/STREAM/
+cd workloads/STREAM/
 python compile.py
 cd ../../
 ```
