@@ -1,15 +1,11 @@
+echo -e "\nDecompressing MegaTools API"
 
-echo -e "Downloading megatools"
-wget https://megatools.megous.com/builds/experimental/megatools-1.11.0-git-20220401-linux-x86_64.tar.gz
-
-tar -xvf megatools-1.11.0-git-20220401-linux-x86_64.tar.gz 
-
-rm megatools-1.11.0-git-20220401-linux-x86_64.tar.gz
+tar -xvf megatools-1.11.1.20230212-linux-x86_64.tar.gz
 
 echo -e "\nDownloading DAMOV workloads"
-./megatools-1.11.0-git-20220401-linux-x86_64/megatools dl https://mega.nz/file/Mz51xJyY#J_ai3_Pl5kVvFETurKmBuMIrOagUK4sadyahOzUYQVE
+./megatools-1.11.1.20230212-linux-x86_64/megatools dl https://mega.nz/file/Mz51xJyY#J_ai3_Pl5kVvFETurKmBuMIrOagUK4sadyahOzUYQVE
 
-rm -rf megatools-1.11.0-git-20220401-linux-x86_64/
+echo -e "\nDecompressing DAMOV workloads"
 
 tar xvf damov_workloads.tar.gz 
 
