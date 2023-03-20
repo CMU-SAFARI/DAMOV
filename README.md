@@ -65,6 +65,8 @@ sh get_workloads.sh
 
 The `get_workloads.sh` script will download all workloads. The script stores the workloads under the `./workloads` folder.
 
+In case the `get_workloads.sh` script does not work as expected (e.g., due to the user reaching Mega's maximum download quota), one can get the workloads directly from the following link: https://mega.nz/file/Mz51xJyY#J_ai3_Pl5kVvFETurKmBuMIrOagUK4sadyahOzUYQVE 
+
 Please, note that the workload folder requires around 6 GB of storage.
 
 The `./workloads` folder has the following structure:
