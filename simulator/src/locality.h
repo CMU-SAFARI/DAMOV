@@ -4,6 +4,7 @@
 #include <map>
 #include <list>
 #include <vector>
+#include <cstdint>
 #include <set>
 class locality{
  public:
