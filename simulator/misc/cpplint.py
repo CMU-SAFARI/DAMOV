@@ -88,6 +88,9 @@ import string
 import sys
 import unicodedata
 
+if sys.version_info[0] == 3:
+    xrange = range
+
 
 _USAGE = """
 Syntax: cpplint.py [--verbose=#] [--output=vs7] [--filter=-x,+y,...]
@@ -251,7 +254,7 @@ _CPP_HEADERS = frozenset([
     'algo.h', 'builtinbuf.h', 'bvector.h', 'cassert', 'cctype',
     'cerrno', 'cfloat', 'ciso646', 'climits', 'clocale', 'cmath',
     'complex', 'complex.h', 'csetjmp', 'csignal', 'cstdarg', 'cstddef',
-    'cstdio', 'cstdlib', 'cstring', 'ctime', 'cwchar', 'cwctype',
+    'cstdio', 'cstdint', 'cstdlib', 'cstring', 'ctime', 'cwchar', 'cwctype',
     'defalloc.h', 'deque.h', 'editbuf.h', 'exception', 'fstream',
     'fstream.h', 'hashtable.h', 'heap.h', 'indstream.h', 'iomanip',
     'iomanip.h', 'ios', 'iosfwd', 'iostream', 'iostream.h', 'istream',
@@ -2775,7 +2778,7 @@ def GetLineWidth(line):
     The width of the line in column positions, accounting for Unicode
     combining characters and wide characters.
   """
-  if isinstance(line, unicode):
+  if sys.version_info[0] == 2 and isinstance(line, unicode):
     width = 0
     for uc in unicodedata.normalize('NFC', line):
       if unicodedata.east_asian_width(uc) in ('W', 'F'):

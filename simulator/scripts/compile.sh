@@ -6,6 +6,7 @@ DRAMSIMPATH="$ZSIMPATH/DRAMSim2"
 RAMULATORPATH="$ZSIMPATH/ramulator"
 NUMCPUS=$(grep -c ^processor /proc/cpuinfo)
 
+cd $LIBCONFIGPATH && autoreconf -f -i && cd -
 
 if [ "$1" = "z" ]
 then
