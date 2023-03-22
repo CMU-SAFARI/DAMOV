@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 import csv
 import sys
@@ -100,7 +101,7 @@ with open(tmp, "r") as ins:
                 if(line.find("# GETS misses")!=-1 or line.find("# GETX I->M misses")!=-1):
                     l3_misses += int(line.split()[1])
         except:
-            print "Couldn't read some stat"
+            print("Couldn't read some stat")
 
 # ====================== CPU Metrics  ======================
 if(len(cycles_list)!=0):

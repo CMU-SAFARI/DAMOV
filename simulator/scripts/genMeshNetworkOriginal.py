@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 import sys, os;
 
 f = open("network", "w");
@@ -66,10 +67,10 @@ for i in range(numCores):
     l3 = l3Prefix+str(i);
     mem = "mem";
     dist = 0; # latency is already measured in cache
-    print "Connecting "+l1i+" to "+l2;
+    print("Connecting "+l1i+" to "+l2)
     f.write(l1i+" "+l2+" "+"0 0\n");
     
-    print "Connecting "+l1d+" to "+l2;
+    print("Connecting "+l1d+" to "+l2)
     f.write(l1d+" "+l2+" "+"0 0\n");
     
     # Calculate min distance from L3 bank to mesh edge
@@ -80,7 +81,7 @@ for i in range(numCores):
     for mc in memControllers:
         dist = abs(l3x - mc[0])+abs(l3y - mc[1]);
         for c in range(channelsPerController):
-            print "Connecting "+l3+" to mem-"+str(channel)+", dist "+str(dist);
+            print("Connecting "+l3+" to mem-"+str(channel)+", dist "+str(dist))
             f.write(l3+" mem-"+str(channel)+" 1 "+str(l3x)+" "+str(l3y)+" "+str(mc[0])+" "+str(mc[1])+"\n");
             channel = channel + 1;
 
@@ -93,12 +94,12 @@ for i in range(numCores):
         l3y = cores[j][1];
         dist = abs(l2x - l3x)+abs(l2y-l3y);
         lat = dist*(linkLat+routerLat);
-        print "Connecting "+l2+" ("+str(l2x)+", "+str(l2y)+") to "+l3+" ("+str(l3x)+", "+str(l3y)+") = "+str(dist)+", "+str(lat)+" cycles";
+        print("Connecting "+l2+" ("+str(l2x)+", "+str(l2y)+") to "+l3+" ("+str(l3x)+", "+str(l3y)+") = "+str(dist)+", "+str(lat)+" cycles")
         
         if((added.count(l2+l3) == 0) and (added.count(l3+l2) == 0)):
             added.append(l2+l3);
             added.append(l3+l2);
             f.write(l2+" "+l3+" 1 "+str(l2x)+" "+str(l2y)+" "+str(l3x)+" "+str(l3y)+"\n");
         else:
-            print "ERROR";
+            print("ERROR")
             sys.exit();

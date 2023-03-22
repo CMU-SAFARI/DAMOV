@@ -88,6 +88,9 @@ import string
 import sys
 import unicodedata
 
+if sys.version_info[0] == 3:
+    xrange = range
+
 
 _USAGE = """
 Syntax: cpplint.py [--verbose=#] [--output=vs7] [--filter=-x,+y,...]
@@ -2775,7 +2778,7 @@ def GetLineWidth(line):
     The width of the line in column positions, accounting for Unicode
     combining characters and wide characters.
   """
-  if isinstance(line, unicode):
+  if sys.version_info[0] == 2 and isinstance(line, unicode):
     width = 0
     for uc in unicodedata.normalize('NFC', line):
       if unicodedata.east_asian_width(uc) in ('W', 'F'):

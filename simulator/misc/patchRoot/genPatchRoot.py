@@ -22,6 +22,7 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import print_function
 import os, string, sys
 
 class XTemplate(string.Template):
@@ -64,23 +65,23 @@ ncpus = options.ncpus
 root = options.dir
 progDir = os.path.dirname(os.path.abspath(__file__)) + "/"
 
-print "Will produce a tree for %d CPUs/cores in %s" % (ncpus, root)
+print("Will produce a tree for %d CPUs/cores in %s" % (ncpus, root))
 
 if ncpus < 1:
-    print "ERROR: Need >= 1 cpus!"
+    print("ERROR: Need >= 1 cpus!")
     sys.exit(1)
 
 if os.path.exists(root) and not options.force:
-    print "ERROR: Dir already exists, aborting"
+    print("ERROR: Dir already exists, aborting")
     sys.exit(1)
 
 if len(args):
-    print "ERROR: No positional arguments taken, aborting"
+    print("ERROR: No positional arguments taken, aborting")
     sys.exit(1)
 
 cmd("mkdir -p " + root)
 if not os.path.exists(root):
-    print "ERROR: Could not create %s, aborting" % root
+    print("ERROR: Could not create %s, aborting" % root)
     sys.exit(1)
 
 ## /proc
@@ -122,7 +123,7 @@ for cpu in range(ncpus):
     td = d + "topology/"
     cmd("mkdir -p " + td)
     if maxCpus > 255:
-        print "WARN: These many cpus have not been tested, x2APIC systems may be different..."
+        print("WARN: These many cpus have not been tested, x2APIC systems may be different...")
     cmd("echo %d > %s" % (cpu, td + "core_id"))
     cmd("echo %s > %s" % (cpuList, td + "core_siblings_list"))
     cmd("echo %d > %s" % (cpu, td + "thread_siblings_list"))

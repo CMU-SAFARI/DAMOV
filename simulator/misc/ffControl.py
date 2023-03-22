@@ -22,6 +22,7 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import print_function
 import os, sys, subprocess
 from optparse import OptionParser
 
@@ -38,19 +39,19 @@ while matches < opts.maxMatches or opts.maxMatches <= 0:
     try:
         line = sys.stdin.readline()
     except:
-        print "stdin done, exiting"
+        print("stdin done, exiting")
         break
 
     if line.startswith("[H] Global segment shmid = "):
         targetShmid = int(line.split("=")[1].lstrip().rstrip())
-        print "Target shmid is", targetShmid
+        print("Target shmid is", targetShmid)
 
     if line.find(opts.lineMatch) >= 0:
         if targetShmid >= 0:
-            print "Match, calling fftoggle"
+            print("Match, calling fftoggle")
             matches += 1
             subprocess.call([os.path.join(opts.fftogglePath, "fftoggle"), str(targetShmid), str(opts.procIdx)])
         else:
-            print "Match but shmid is not valid, not sending signal (are you sure you specified procIdx correctly? it's not the PID)"
-print "Done, %d matches" % matches
+            print("Match but shmid is not valid, not sending signal (are you sure you specified procIdx correctly? it's not the PID)")
+print("Done, %d matches" % matches)
 

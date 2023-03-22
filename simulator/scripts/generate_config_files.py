@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 import os
 import errno
@@ -87,8 +88,8 @@ def create_pim_configs(benchmark, application, function, command, version):
 
 
 if(len(sys.argv) < 2):
-    print "Usage python generate_config_files.py command_file"
-    print "command_file: benckmark,applicationm,function,command"
+    print("Usage python generate_config_files.py command_file")
+    print("command_file: benckmark,applicationm,function,command")
     exit(1)
 
 with open(sys.argv[1], "r") as command_file:
@@ -98,7 +99,7 @@ with open(sys.argv[1], "r") as command_file:
         application = line[1]
         function = line[2]
         command = line[3]
-        print line
+        print(line)
         command = command.replace('\n','')
 
         ### Fixed LLC Size 
