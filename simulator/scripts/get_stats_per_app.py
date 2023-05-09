@@ -39,17 +39,20 @@ l3d = False
 lfmr = 0.0
 
 core_id = 0
+label = ""
 with open(tmp, "r") as ins:
     for line in ins:
         try:
 
             # ====================== CPU Metrics  ======================
             if(line.find("instrs: ")!=-1):
+                label = "instrs"
                 instructions += int(line.split()[1])
-                instructions_list.append(instructions)
-
+                
             if(line.find("Simulated unhalted cycles")!= -1):
+                label = "cycles"
                 cycles_list.append(int(line.split()[1]))
+                
 
             # ====================== Cache Metrics  ======================
             if(line.find("l1d:")!=-1):
@@ -72,35 +75,42 @@ with open(tmp, "r") as ins:
 
             if(l1d == True):
                 if (line.find(": # Filter cache stats")!=-1):
+                    label = "l1d"
                     tmp2 = line.split(":")[0]
                     tmp2 = tmp2.replace(":","")
                     core_id = int(tmp2.split("-")[1])
-
-
-                if(line.find("# GETS hits")!=-1 or line.find("# GETX hits")!=-1):
-                    l1_hits += int(line.split()[1])
                     
+                if(line.find("# GETS hits")!=-1 or line.find("# GETX hits")!=-1):
+                    label = "l1d+hits"
+                    l1_hits += int(line.split()[1])
 
                 if(line.find("# GETS misses")!=-1 or line.find("# GETX I->M misses")!=-1):
+                    label = "l1d+misses"
                     l1_misses += int(line.split()[1])
-
+                    
             if(l2d == True):
                 if(line.find("hGETS:")!=-1 or line.find("hGETX:")!=-1):
+                    label = "l2d+hits"
                     l2_hits += int(line.split()[1])
-                
+                    
+
                 if(line.find("# GETS misses")!=-1):
+                    label = "l2d+misses"
                     l2_misses += int(line.split()[1])
-
-
+                    
             if(l3d == True):
                 if(line.find("hGETS:")!=-1 or line.find("hGETX:")!=-1):
+                    label = "l3d+hits"
                     l3_hits += int(line.split()[1])
-                
+                    
                 
                 if(line.find("# GETS misses")!=-1 or line.find("# GETX I->M misses")!=-1):
+                    label = "l3d+misses"
                     l3_misses += int(line.split()[1])
+                    
+
         except:
-            print "Couldn't read some stat"
+            print "Couldn't read some stat. Check label: " + label
 
 # ====================== CPU Metrics  ======================
 if(len(cycles_list)!=0):
@@ -144,9 +154,6 @@ if(l1_misses):
 else:
     lfmr = 0
 
-print(l3_misses)
-print(l1_misses)
-
 print("\n ------------------ Summary ------------------------")
 print("Instructions: " + str(instructions))
 print("Cycles: " + str(cycles))
@@ -157,4 +164,3 @@ print("L1 Miss Rate (%): " + str(l1_miss_rate))
 print("L3 MPKI: " + str(l3_mpki))
 print("LFMR: " + str(lfmr))
 print("")
-
