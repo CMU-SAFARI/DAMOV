@@ -249,6 +249,36 @@ foo(){
 ./build/opt/zsim configuration_file.cfg
 ```
 
+## DAMOV's Docker Container 
+
+In case you are having issues downloading and executing DAMOV, we have prepared a Docker container, which comes with (1) a compiled version of DAMOV-SIM and (2) the decompressed folder for the DAMOV workloads. To download and test DAMOV's Docker container, run the following commands 
+
+1. Download DAMOV's Docker container: 
+```
+docker pull gfojunior/damov:latest
+```
+
+2. Launch the container:
+```
+ docker run --privileged -it gfojunior/damov
+```
+
+3. Compile and run an example workload (the following commands should be executed inside the Docker container):
+```
+cd /DAMOV/workloads/STREAM/
+python compile.py
+cd /DAMOV/simulator
+python scripts/generate_config_files.py command_files/stream_cf
+cp config_files/host_ooo/no_prefetch/stream/1/Copy_Copy.cfg test.cfg
+sed -i 's/1000000000L/1000000L/g' test.cfg
+./build/opt/zsim test.cfg
+python scripts/get_stats_per_app.py zsim_stats/host_ooo/no_prefetch/1/stream_Copy_Copy.zsim.out
+```
+
+## Known Issues
+
+- *Using DAMOV-SIM using Ubuntu version >= 20.04.* DAMOV-SIM relies on zsim and Intel pin 2.14 tools to work. However, Intel pin 2.14 is not compatible with Ubuntu versions larger or equal to 20.04. There are two possible solutions in case DAMOV-SIM fails due to an incompatible Ubuntu/kernel version. (a) Using DAMOV's Docker Container; or (b) Trying to modify zsim (as described [here](https://github.com/s5z/zsim/pull/245); not tested in DAMOV-SIM). 
+
 ## Getting Help
 If you have any suggestions for improvement, please contact geraldo dot deoliveira at safari dot ethz dot ch.
 If you find any bugs or have further questions or requests, please post an issue at the [issue page](https://github.com/CMU-SAFARI/damov/issues).
