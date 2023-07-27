@@ -1,0 +1,9 @@
+*.dep
+*.deppo
+*.op
+*.so
+*.po
+.sconsign.dblite
+simulator/build/*
+
+

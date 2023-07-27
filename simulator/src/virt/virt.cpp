@@ -74,6 +74,16 @@ void VirtInit() {
 // Dispatch methods
 void VirtSyscallEnter(THREADID tid, CONTEXT *ctxt, SYSCALL_STANDARD std, const char* patchRoot, bool isNopThread) {
     uint32_t syscall = PIN_GetSyscallNumber(ctxt, std);
+    if (syscall == SYS_arch_prctl && PIN_GetContextReg(ctxt, REG_RDI) == 0x3001) {
+        PIN_SetContextReg(ctxt, REG_INST_PTR, PIN_GetContextReg(ctxt, REG_INST_PTR) + 2);
+        PIN_SetContextReg(ctxt, REG_RAX, -1UL);
+        return;
+    }
+    if (syscall == 435/*SYS_clone3*/) {
+        PIN_SetContextReg(ctxt, REG_RAX, -ENOSYS);
+        PIN_SetContextReg(ctxt, REG_INST_PTR, PIN_GetContextReg(ctxt, REG_INST_PTR) + 2);
+        return;
+    }
     if (syscall >= MAX_SYSCALLS) {
         warn("syscall %d out of range", syscall);
         postPatchFunctions[tid] = NullPostPatch;
