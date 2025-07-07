@@ -1,0 +1,52 @@
+#These are steps for running your benchmark on the DAMOV framework for comparing in-memory computation with host CPU performance.
+# STEP 1
+#Create your benchmark folder and binary
+#Example:
+
+cd /DAMOV/workloads
+mkdir hellobench  #this hellobench is your benchmark's name
+cd hellobench
+vim mansi1.c   #this is your file name, add #include 'zsim_hooks.h', this header file should be in your directory of source code folder
+
+
+# compile your code :
+gcc -std=c99 -I. mansi1.c -o mansi1.out
+
+
+
+# STEP 2
+# Create a command file, you need to tell DAMOV where your binary is and what is it's name.
+cd /DAMOV/simulator/command_files
+
+# format :
+<benchmark> <application> <function> <full_path_to_binary> <version>
+
+# example:
+hellobench . mansi1, mansi1, /DAMOV/workloads/hellobench/mansi1.out,1     #in version you can type 1 or can write default.
+
+# STEP 3
+cd /DAMOV/simulator
+
+# Run the config generation file
+python scripts/generate_config_files.py command_files/hellobench_cf
+
+#This will generate the file under:
+cd / DAMOV/simulator/config_files
+# all files will be ready , i.e, host , pim , no prefetch , prefetch.
+
+# STEP 4 
+# run simulations 
+./build/opt/zsim config_files/host_ooo/no_prefetch/hellobench/1/mansi1_mansi1.cfg
+# this simulation is specially for - host_ooo , no_prefetch , 1 core . If you want something else, you can edit in the above command.
+
+# STEP 5
+# collect stats
+python3 scripts/get_stats_per_app.py zsim_stats/host_ooo/no_prefetch/1/hellobench_mansi1_mansi1.zsim.out
+#Again, if you want others, you need to do step 4, and then only you can generate the stats.
+
+
+
+
+#If you find any difficulty while running the benchmark, you can contact me here :
+#bhongademansi358@gmail.com
+
